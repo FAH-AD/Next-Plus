@@ -1,0 +1,42 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import { Image } from 'astro:assets';
+import contact from '../assets/contact.jpeg';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<link rel="stylesheet" href="https://s.pageclip.co/v1/pageclip.css" media="screen">
+		<style>
+		h1 {
+				padding-top: 25px;
+			}
+			
+			</style>
+	</head>
+	<body>
+		<Header />
+		<br>
+		<h1>Contact Form</h1>
+		<br>
+		<Image loading="eager" src={contact} alt="Chat bubble with 3 dots representing someone typing" style={{ width: '15vw', display: 'block', margin: '0 auto' }} />
+		<br>
+		<main>
+			<form action="https://send.pageclip.co/Kj9vcCAFJwItkmi0FBRSkdzNTUlwZiPP/contact-us" class="pageclip-form" method="post">
+				<input type="email" name="email" placeholder="Your Email" required>
+				<input type="text" name="subject" placeholder="Subject" required>
+				<textarea name="message" rows="25" placeholder="Message" required></textarea>
+				<button type="submit" class="pageclip-form__submit">
+					<span>SUBMIT</span>
+				</button>
+			</form>
+		</main>
+		<Footer />
+		<script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
+	</body>
+</html>

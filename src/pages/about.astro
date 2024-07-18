@@ -1,0 +1,31 @@
+---
+import Layout from '../layouts/BlogPost.astro';
+import { Image } from 'astro:assets';
+import aboutus1 from '../assets/aboutus1.jpeg';
+---
+
+<Layout
+	title="About Us"
+	description="Learn more about Next Plus"
+	pubDate={new Date('April 08 2024')}
+>
+
+<Image loading="eager" src={aboutus1} alt="2 people looking at the computer with a pen in one of the persons hands." style={{ width: '38vw', display: 'block', margin: '0 auto' }} />
+<br>
+	<p>
+		Welcome to Next Plus, a dynamic company poised to revolutionize the landscape of government services. With a foundation built on the legacy of our predecessor, Yellow Apple LLC, which held prestigious contracts, including BPAs with the US Army in Afghanistan, Next Plus inherits a wealth of experience and expertise. Our aim is precise: to forge enduring partnerships with federal government agencies and deliver unparalleled solutions across three key domains.
+	</p>
+
+	<p>
+		At the heart of our offerings is a commitment to Information Technology (IT) Services. Harnessing state-of-the-art technology, we specialize in delivering comprehensive networking materials and setting up IT infrastructure. From seamless integration to robust system implementation, Next Plus ensures our clients maintain a competitive edge in the digital era.
+	</p>
+
+	<p>
+		In an era where cybersecurity threats loom large, Next Plus is not just a bastion of defense but a proactive one. Our Cybersecurity division offers a holistic suite of services, encompassing risk assessment, identity and access management, incident response, threat detection and mitigation, and network security. By implementing routine penetration testing and vulnerability assessments, we empower government agencies to confidently operate in an increasingly complex threat landscape, ensuring they are always one step ahead of potential threats.
+	</p>
+
+	<p>
+		Complementing our technological prowess is our Logistics Services arm, which is not just about streamlining the supply chain for government agencies, but about doing it efficiently and reliably. From procurement to delivery and transportation of goods to freight services, Next Plus ensures that resources reach their destination efficiently and on schedule, resources reach their destination efficiently and on schedule, minimizing delivery times and ensuring consistent on-time performance. With a proven track record and an unwavering commitment to excellence, Next Plus is poised to be the partner of choice for federal government agencies seeking innovative IT, cybersecurity, and logistics solutions, providing a reliable and secure foundation for their operations.
+	</p>
+
+</Layout>

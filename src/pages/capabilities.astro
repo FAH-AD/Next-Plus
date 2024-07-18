@@ -1,0 +1,53 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import { Image } from 'astro:assets';
+import Statement from '../assets/Statement.jpg';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+        <style>
+			main {
+				width: 1000px;
+			}
+			.center {
+			  text-align: center;
+			}
+			.bold {
+			  font-weight: bold;
+			}
+		  </style>
+		  </head>
+		  <Header />
+		  <body>
+		  <main>
+		  <h1 class="center bold">Capability Statement</h1>
+		  <br>
+		  <div class="center bold">Company Overview</div>
+		  <p>Next Plus delivers outstanding Information Technology and logistics solutions that meet or exceed client expectations. Our mission is to provide reliable, timely, and efficient services tailored to our clients' needs, ensuring optimal results and client satisfaction.</p>
+		  
+		  <div class="center bold">Core Competencies</div>
+		  <p><span class="bold">IT Services:</span> Specializing in a comprehensive suite of non-programming IT solutions, our team offers expertise in the configuration and setup of devices, procurement of state-of-the-art equipment, and establishing robust networking and infrastructure systems.</p>
+		  <p><span class="bold">Logistics:</span> We specialize in advanced logistical solutions that enhance the efficiency of goods transportation. Additionally, we expertly handle the supply of non-perishable goods. Our services are designed to consistently exceed the expectations of our diverse clientele, ensuring satisfaction across all aspects of delivery and supply chain management.</p>
+		  
+		  <div class="center bold">Differentiators</div>
+		  <p><span class="bold">Specialized Experience:</span> Built on the foundation of our predecessor, Yellow Apple LLC, we not only have a proven track record with demanding clients like the US Army in Afghanistan, demonstrating our capability to manage complex supply chains under stringent conditions, but we also specialize in building state-of-the-art media centers.</p>
+		  <p><span class="bold">Client-Centric Focus:</span> We prioritize the goals and objectives of our clients, ensuring all solutions not only meet but exceed their expectations, with a strong commitment to punctuality and reliability.</p>
+		  
+		  <div class="center bold">Past Performance</div>
+		  <p><span class="bold">Example Project:</span> As our predecessor, Yellow Apple LLC, we efficiently managed and executed a crucial supply chain for the US Army in Afghanistan, providing essential printing materials, including toner and cartridges for various printers. We successfully met unexpected demands by sourcing supplies globally, often delivering them from Europe within 24 hours, maintaining high operational readiness for the US Army.</p>
+		  
+		  <div class="center bold">Capacity</div>
+		  <p><span class="bold">Project Management:</span> Skilled in handling multiple, diverse projects simultaneously, ensuring quality control and timely delivery without compromising service quality.</p>
+		  
+		  <div class="center bold">Commitment to Excellence</div>
+		  <p>Next Plus is committed to upholding the highest standards of service delivery in the IT and logistics sectors. We are dedicated to continuous improvement and innovation, ensuring that our services remain at the forefront of industry standards and client expectations.</p>
+		</main>
+		  <Footer />
+		  </body>
+		  </html>

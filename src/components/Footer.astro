@@ -1,0 +1,90 @@
+---
+const today = new Date();
+import { Image } from 'astro:assets';
+import np from '../assets/Np-logo.png';
+---
+
+<footer>
+  <div class="footer-content">
+    <div class="image-container">
+      <Image 
+        loading="eager" 
+        src={np} 
+        alt="Logo" 
+        style={{ width: '8vw' }} 
+      />
+    </div>
+
+    <div class="internal-links">
+      <a href="/">Home</a>
+      <!--a href="/blog">Blog</a-->
+      <a href="/about">About Us</a>
+      <a href="/capabilities">Capabilities</a>
+      <a href="/contact">Contact Us</a>
+    </div>
+  </div>
+
+  <div class="address">
+    40 W ATENTO LN<br />
+    MOUNTAIN HOUSE CA 95391-2042
+  </div>
+
+  <div class="copyright">
+    &copy; {today.getFullYear()} Next Plus LLC. All rights reserved.
+  </div>
+</footer>
+
+<style>
+  footer {
+  padding: 2em 1em 1em 1em;
+  background: linear-gradient(var(--gray-gradient)) no-repeat;
+  color: rgb(var(--gray));
+  text-align: center;
+  position: relative;
+  font-family: Arial, sans-serif;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1em;
+}
+
+.image-container {
+  width: 8vw; /* Adjust the width of the image container */
+  margin-right: auto; /* Align to the left */
+}
+
+.internal-links {
+  margin-top: 1em;
+  display: flex;
+  justify-content: center; /* Center the internal links */
+  flex-grow: 1; /* Allow internal links to take up remaining space */
+}
+
+.internal-links a {
+  text-decoration: none;
+  color: rgb(var(--gray));
+  margin: 0 1em;
+}
+
+.internal-links a:hover {
+  color: rgb(var(--gray-dark));
+}
+
+.address {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  text-align: right;
+  font-size: 0.9em;
+  color: rgb(var(--gray));
+}
+
+.copyright {
+  font-size: 0.9em;
+  color: rgb(var(--gray-dark));
+}
+
+</style>

@@ -1,0 +1,117 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import { Image } from 'astro:assets';
+import finance from '../assets/finance.jpeg';
+import logistics from '../assets/logistics.jpeg';
+import network from '../assets/network.jpeg';
+import serverdell from '../assets/server-photo.jpeg';
+import servers from '../assets/servers.jpeg';
+import worker from '../assets/worker.jpeg';
+import quality from '../assets/quality.jpeg';
+import hero from '../assets/hero.jpg';
+
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<style>
+			main {
+				width: 1000px;
+			}
+		</style>
+	</head>
+	<body>
+		<Header />
+		<div style={{ position: 'relative' }}>
+			<Image loading="eager" src={hero} alt="Man looking at network rack while holding ethernet cable" style={{ width: '100vw', height: '680px', objectFit: 'cover', borderRadius: '8px', display: 'block', margin: '0 auto',
+			  }}
+			/>
+			<div
+			  style={{
+				position: 'absolute',
+				top: '50%',
+				left: '50%',
+				transform: 'translate(-50%, -50%)',
+				textAlign: 'center',
+			  }}
+			>
+			  <p style={{ fontSize: '64px', fontWeight: 700, color: '#fff', marginBottom: '24px' }}>We Are Next Plus</p>
+			  <p style={{ fontSize: '24px', color: '#fff', marginBottom: '24px' }}>Where Vision Meets Execution</p>
+			  <a href="/capabilities" style={{ textDecoration: 'none' }}>
+				<div
+				  style={{
+					display: 'inline-block',
+					padding: '14px 24px',
+					background: '#5171ff',
+					borderRadius: '8px',
+					boxShadow: '0px 1px 2px 0 rgba(0,0,0,0.05)',
+					marginBottom: '24px',
+				  }}
+				>
+				  <p style={{ fontSize: '16px', fontWeight: 600, color: '#fff', margin: 0 }}>Learn More</p>
+				</div>
+			  </a>
+			</div>
+		  </div>
+		  
+		
+		<main>
+			<h2 style="text-align: center;">We are Next Plus LLC</h2>
+			<p>
+				At Next Plus, we are your trusted partner in Information Technology and Logistics solutions. Founded in 2024, we pride ourselves on our ability to deliver exceptional services that not only meet but exceed your expectations. From advanced IT setups to efficient goods transportation and reliable supply chains, our comprehensive solutions are meticulously crafted with your success as our top priority.
+			</p>
+			<br>
+			<Image loading="lazy" src={servers} alt="Datacenter server room, with server racks" style={{ width: '35vw', display: 'block', margin: '0 auto' }} />
+			<br>
+			<br>
+			<h4>Our Services:</h4>
+			<p>
+				<ul>
+					<li>
+						<strong>IT Services:</strong> Leverage our proficiency in configuring and setting up devices, procuring cutting-edge equipment, and constructing robust network infrastructures. Our comprehensive IT solutions are meticulously designed to optimize your operational efficiency.
+					</li>
+					<li>
+						<strong>Logistics:</strong> Experience the pinnacle of logistical planning and execution with our tailored solutions. As a general goods supplier, we specialize in ensuring the timely delivery and smooth movement of a wide range of non-perishable items. Whether it's transporting goods from warehouse to customer or managing inventory efficiently, we ensure your items arrive on time and in perfect condition, making every delivery seamless and stress-free.
+					</li>
+				</ul>
+			</p>
+			<br>
+			<Image loading="lazy" src={quality} alt="2 workers working on something using a Mac laptop while pointing at the screen." style={{ width: '35vw', display: 'block', margin: '0 auto' }} />
+			<br>
+			<br>
+			<h5>Why Choose Us?</h5>
+			<ul>
+				<li>
+					<strong>Specialized Experience:</strong> Leveraging the foundation laid by our predecessor Yellow Apple LLC, we proudly continue our tradition of excellence in navigating intricate supply chains, exemplified by our notable endeavors with the US Army in Afghanistan. Setting us apart is our proficiency in crafting state-of-the-art media centers, notably demonstrated in Kabul's Military Training Center (KMTC).
+				</li>
+				<li>
+					<strong>Client-Centric Focus:</strong> At Next Plus, your goals are our priority. We commit to delivering punctual and reliable services that not only aim to meet your expectations but exceed them.
+				</li>
+				<li>
+					<strong>Commitment to Excellence:</strong> We are dedicated to maintaining the highest standards of service in the IT and logistics industries. Through continuous improvement and innovation, we ensure our services remain at the cutting edge, consistently surpassing industry standards and elevating client satisfaction.
+				</li>
+			</ul>
+			<br>
+			<Image loading="lazy" src={logistics} alt="Trucks parked in a parking lot in a V shaped formation, with do not enter on both ends of the parking lot" style={{ width: '35vw', display: 'block', margin: '0 auto' }} />
+			<br>
+			<br>
+			<h5>Our Promise</h5>
+				<p>With Next Plus, you gain more than just a service provider—you gain a dedicated partner committed to excellence.</p>
+				<ul>
+					<li><strong>Comprehensive Expertise:</strong> Our team is equipped to handle multifaceted projects with proficiency.</li>
+					<li><strong>Swift Responsiveness:</strong> We prioritize your needs, ensuring rapid responses and adjustments.</li>
+					<li><strong>Proven Agility:</strong> Adaptability in meeting challenges, maintaining high performance under pressure.</li>
+					<li><strong>Forward-Thinking Solutions:</strong> Choose us for innovative solutions that propel your operations forward.</li>
+				</ul>
+			<br>
+				<Image loading="lazy" src={worker} alt="Construction workers making hand gestures while on a new construction site, to convey hard work." style={{ width: '35vw', display: 'block', margin: '0 auto' }} />
+			<br>
+		</main>
+		<Footer />
+	</body>
+</html>
